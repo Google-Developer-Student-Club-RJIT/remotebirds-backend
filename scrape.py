@@ -1,5 +1,4 @@
 import snscrape.modules.twitter as twitterScraper
-import json
 
 job_board_list = [
     "RemoteTechJobs0", 
@@ -35,7 +34,7 @@ def scrape(**kwargs):
     query = f'{kwargs["query"]} since:{kwargs["start_date"]} until:{kwargs["end_date"]}'
     scraper = twitterScraper.TwitterSearchScraper(query)
     tweets = []
-    max_count = 20
+    max_count = 100
     for i, tweet in enumerate(scraper.get_items()):
         if i == (max_count):
             break

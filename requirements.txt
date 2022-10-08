@@ -3,14 +3,17 @@ backports.zoneinfo==0.2.1
 beautifulsoup4==4.11.1
 certifi==2022.9.24
 charset-normalizer==2.1.1
+dj-database-url==1.0.0
 Django==4.1.2
+django-heroku==0.3.1
 django-rest-framework==0.1.0
 djangorestframework==3.14.0
-django-heroku==0.3.1
-gunicorn==20.1.0
+djangorestframework-api-key==2.2.0
 filelock==3.8.0
+gunicorn==20.1.0
 idna==3.4
 lxml==4.9.1
+psycopg2==2.9.3
 PySocks==1.7.1
 python-decouple==3.6
 pytz==2022.4
@@ -18,4 +21,5 @@ requests==2.28.1
 snscrape==0.4.3.20220106
 soupsieve==2.3.2.post1
 sqlparse==0.4.3
-whitenoise==6.0.0
+urllib3==1.26.12
+whitenoise==6.2.0

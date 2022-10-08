@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "a8ab1084-c0ab-4826-ae9a-eea2d4313768",
+		"name": "RemoteBird",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16223691"
+	},
+	"item": [
+		{
+			"name": "Request from Heroku",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://remotebirdjobs-api.herokuapp.com/search/?search=react&start_date=2022-10-01&end_date=2022-10-06&wfh=true&page=1&pagesize=10",
+					"protocol": "https",
+					"host": [
+						"remotebirdjobs-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "react"
+						},
+						{
+							"key": "start_date",
+							"value": "2022-10-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2022-10-06"
+						},
+						{
+							"key": "wfh",
+							"value": "true"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pagesize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request from localhost",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/search/?search=react&start_date=2022-10-01&end_date=2022-10-06&wfh=true&page=1&pagesize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "react"
+						},
+						{
+							"key": "start_date",
+							"value": "2022-10-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2022-10-06"
+						},
+						{
+							"key": "wfh",
+							"value": "true"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pagesize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

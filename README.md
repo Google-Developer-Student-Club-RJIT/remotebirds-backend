@@ -43,7 +43,7 @@ docker-compose build
 docker-compose up
 ```
 
-Or you can simply run the following command to run the project:
+Or you can simply run the following command to run the project after cloning the project:
 
 ```
 python manage.py runserver

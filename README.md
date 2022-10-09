@@ -44,7 +44,26 @@ docker-compose up
 ```
 
 Or you can simply run the following command to run the project after cloning the project:
+Install virtualenv then create a virtual environment venv:
+```
+pip3 install virtualenv
+virtualenv venv
+```
+activate virtualenv using following command in Mac/Linux:
 
+```
+source venv/bin/activate
+```
+in windows:
+```
+venv\Scripts\activate
+```
+
+Then install all the dependencies using:
+```
+pip3 install -r requirements.txt
+```
+And run:
 ```
 python manage.py runserver
 ```

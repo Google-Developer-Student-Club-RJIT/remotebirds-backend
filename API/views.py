@@ -18,8 +18,6 @@ class GetTweets(generics.ListAPIView):
             final_query+= '"'+query+' '+i+'" OR '
         final_query = '(' + final_query[:-4] + ')'
 
-        # startIndex = (int(get_data['page']) - 1) * int(get_data['pagesize'])
-        # endIndex = int(get_data['page']) * int(get_data['pagesize'])
         resp= scrape(
             query=final_query,
             start_date=get_data['start_date'],
@@ -32,10 +30,7 @@ class GetTweets(generics.ListAPIView):
         except Exception as e:
             print(e)
 
-        # print(p)
-
         return Response(status=200, data=p, headers={
             'X-Total-Count': len(resp),
             'Access-Control-Expose-Headers': 'X-Total-Count'
         })
-        # return Response(data = p)

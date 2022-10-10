@@ -1,4 +1,4 @@
-# Remotebirds-Backend
+# Remote Birds (Backend)
 
 <div align="center">
 
@@ -25,9 +25,9 @@
 
 ## About the Project
 
-This is the backend or API of the Remotebirdjobs project. This project is a part of the Hacktoberfest in behalf of Google Developer Student Club's RJIT. The project is made using Django and Python.
+This is the backend or API of the Remotebird jobs project. This project is a part of the Hacktoberfest on behalf of Google Developer Student Club's RJIT. The project is made using Django and Python.
 
-This API can be integrated anywhere weather it is a website or an app. This API is made to provide the user with the latest jobs that are posted on twitter. The user can also search for the jobs according to their requirements.
+This API can be integrated anywhere whether it is a website(with any frontend Frameworks) or an app. This API is made to provide the user with the latest jobs that are posted on twitter. The user can also search for the jobs according to their requirements.
 
 The API is hosted on Heroku and can be accessed using the following link:
 https://remotebirdjobs-api.herokuapp.com/
@@ -36,7 +36,7 @@ The onlyendpoint that is available is the search endpoint. The search endpoint c
 
 ## Getting Started
 
-The complete project is dockerized. To run the project you can follow following steps:
+The complete project is Dockerized. To run the project you can follow following steps:
 
 ```
 docker-compose build
@@ -139,7 +139,7 @@ git push -u origin <your_branch_name>
 
 *13.* Click on `Create Pull Request`.
 
-*14.* Hurray ❗ You have created a PR to the remotebirds-backend 💥 . Sit back patiently and relax till then the project maintainers will review your PR. Please understand, there will be some time taken to review a PR and can vary from a few hours to a few days too so be Patient and keep contributing.
+*14.* Hurray ❗ You have created a PR to the remotebirds-backend 💥 . Sit back patiently and relax till then the project maintainers will review your PR. Please understand, there will be some time taken to review a PR and can vary from a few hours to a few days too so be patient and keep contributing.
 
 
 ### Our Contributors
@@ -148,7 +148,6 @@ git push -u origin <your_branch_name>
   <img src="https://contrib.rocks/image?repo=Google-Developer-Student-Club-RJIT/remotebirds-backend" />
 </a>
 
-Made with [contrib.rocks](https://contrib.rocks).
 
 
 

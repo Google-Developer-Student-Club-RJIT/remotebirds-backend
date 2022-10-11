@@ -1,9 +1,10 @@
 import snscrape.modules.twitter as twitterScraper
+from langdetect import detect
 
 job_board_list = [
-    "RemoteTechJobs0", 
-    "zobjobsUS", 
-    "RemoteSonar", 
+    "RemoteTechJobs0",
+    "zobjobsUS",
+    "RemoteSonar",
     "RecruitngEdge",
     "CodingJobsIt",
     "jobscanCo",
@@ -42,15 +43,22 @@ def scrape(**kwargs):
         # print(i, tweet)
         # if str(tweet.user) not in block_list:
         bodies = tweet.content
-        # bodies = ''.join(' ' + val.replace('\xa0', '').replace('\r\n', '').strip() for val in bodies)
-        tweets.append({
-            "id": str(tweet.id),
-            "url": tweet.url,
-            "content": bodies,
-            "date": str(tweet.date)
-        })
-        # else:
-        #     max_count += 1
+
+        # checking the language
+        language = detect(bodies)
+
+        if (language == "en"):
+            # bodies = ''.join(' ' + val.replace('\xa0', '').replace('\r\n', '').strip() for val in bodies)
+            tweets.append({
+                "id": str(tweet.id),
+                "url": tweet.url,
+                "content": bodies,
+                "date": str(tweet.date)
+            })
+            
+        else:
+            max_count += 1
+
     return tweets
 
 

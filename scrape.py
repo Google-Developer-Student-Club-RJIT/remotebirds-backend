@@ -55,7 +55,10 @@ def scrape(**kwargs):
                 "content": bodies,
                 "date": str(tweet.date)
             })
-        #     max_count += 1
+            
+        else:
+            max_count += 1
+
     return tweets
 
 

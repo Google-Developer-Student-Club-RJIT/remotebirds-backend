@@ -9,7 +9,7 @@ class GetTweets(generics.ListAPIView):
     def get(self, *args, **kwargs):
         get_data = self.request.query_params
         query = get_data['search']
-        word_list = ['job','developer required',"hiring","internship","oppurtunity",'required','full-time','part-time']
+        word_list = ['job','developer required','hiring','internship','opportunity','required','full-time','part-time','technical','training','engineering','marketing','recruitment','researching']
 
         if get_data.get('wfh') and get_data.get('wfh') == 'true':
             query = query+' remote'

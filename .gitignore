@@ -9,9 +9,11 @@ __pycache__
 /__pycache__
 */__pycache__/
 */__pycache__/*
-db.sqlite3
 .DS_Store
 /.DS_Store
 */.DS_Store
 */.DS_Store/*
 .vscode
+celerybeat-schedule.db
+dump.rdb
+db.sqlite3

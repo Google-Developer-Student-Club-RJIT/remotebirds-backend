@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "remotebirds/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "runtime": "python3.9", "maxLambdasize": "15mb" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "remotebirds/wsgi.py"
+    }
+  ]
+}

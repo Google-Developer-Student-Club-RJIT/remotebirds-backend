@@ -1,6 +1,7 @@
 import snscrape.modules.twitter as twitterScraper
 from langdetect import detect
 
+
 job_board_list = [
     "RemoteTechJobs0",
     "zobjobsUS",
@@ -29,10 +30,7 @@ job_board_list = [
 
 block_list = ["https://twitter.com/" + e for e in job_board_list]
 
-
-def scrape(**kwargs):
-    # query = f'{kwargs["query"]} since:2022-09-01 until:2022-09-31'
-    query = f'{kwargs["query"]} since:{kwargs["start_date"]} until:{kwargs["end_date"]}'
+def scrape_tweets(query):
     scraper = twitterScraper.TwitterSearchScraper(query)
     tweets = []
     max_count = 100
@@ -58,10 +56,13 @@ def scrape(**kwargs):
             
         else:
             max_count += 1
-
     return tweets
 
 
-if __name__ == "__main__":
-    # scrape("develoepr job remote")
-    print(scrape('django'))
+def scrape(**kwargs):
+    # query = f'{kwargs["query"]} since:2022-09-01 until:2022-09-31'
+    query = f'{kwargs["query"]} since:{kwargs["start_date"]} until:{kwargs["end_date"]}'
+    tweets = scrape_tweets(query)
+
+    return tweets
+
